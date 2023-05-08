@@ -1,47 +1,15 @@
-# Sistema Básico de Gerenciamento de Estoque
+Este é um programa em C para realizar o cadastro de produtos em um arquivo binário e exibir as informações cadastradas.
 
-Este programa em C é um sistema básico de gerenciamento de estoque de produtos. Ele permite o cadastro de produtos, incluindo ID, nome, preço e quantidade.
+O programa utiliza uma estrutura chamada "dados" que contém informações sobre cada produto, como registro, nome, quantidade e preço. O usuário pode escolher entre cadastrar novos produtos, exibir os produtos cadastrados ou encerrar o programa.
 
-## Funcionalidades
+A função "aloca" é utilizada para alocar memória para a estrutura "dados". A função "cadastro" é responsável por obter as informações do usuário e armazená-las no arquivo binário. A função "verifica" é utilizada para verificar a quantidade de elementos já existentes no arquivo binário. A função "grava" é responsável por gravar as informações do produto no arquivo binário. A função "mostra" é responsável por exibir as informações dos produtos já cadastrados no arquivo binário.
 
-O programa oferece as seguintes funcionalidades:
+O programa utiliza a biblioteca "stdio.h" para entrada e saída de dados e a biblioteca "stdlib.h" para alocar memória dinamicamente.
 
-1. Cadastro de produtos
-2. Entrada de produtos (em desenvolvimento)
-3. Venda de produtos (em desenvolvimento)
-4. Fechamento de caixa (em desenvolvimento)
+Para compilar e executar o programa, é necessário ter um compilador C instalado na máquina. No Windows, pode-se utilizar o Microsoft Visual Studio ou o Code::Blocks. No Linux, pode-se utilizar o GCC.
 
-## Compilação
+O arquivo binário "estoque.bin" deve ser criado antes de executar o programa. Caso o arquivo não exista, o programa criará um novo arquivo ao gravar as informações do primeiro produto cadastrado. É importante salientar que cada vez que o programa é executado, as informações são adicionadas ao final do arquivo.
 
-Para compilar este programa, use o compilador GCC com o seguinte comando:
+O código utiliza a função "system" para limpar a tela e pausar a execução em alguns momentos, o que pode não funcionar em alguns sistemas operacionais ou ambientes de desenvolvimento.
 
-```bash
-gcc -o gerenciamento_estoque main.c
-
-Execução
-Para executar o programa, use:
-
-bash
-Copy code
-./gerenciamento_estoque
-Funcionamento
-O programa funciona da seguinte maneira:
-
-O usuário seleciona uma opção do menu principal.
-Se a opção escolhida for o cadastro de produtos, o usuário insere o nome, o ID, o preço e a quantidade do produto.
-Se o produto já existir no sistema (mesmo ID), a quantidade é atualizada.
-As outras opções de menu (entrada de produtos, venda de produtos e fechamento de caixa) estão em desenvolvimento.
-Estrutura de Dados
-O programa utiliza uma estrutura chamada "produto" para armazenar as informações dos produtos, incluindo:
-
-ID do produto (int)
-Nome do produto (char[50])
-Preço do produto (float)
-Quantidade do produto (int)
-Funções
-O programa possui as seguintes funções:
-
-void cadastro(produto *pp, int quantidade_inicial): cadastra um produto no sistema.
-void aloca_produto(produto **pp, int tam): aloca dinamicamente memória para a estrutura de produtos.
-Contribuição
-Sinta-se à vontade para contribuir com este projeto, enviando um pull request ou abrindo uma issue no GitHub.
+O código contém comentários explicativos para facilitar a compreensão das funções.
